@@ -1,0 +1,18 @@
+import React from 'react';
+import Input from '../input';
+import cn from 'classnames/bind';
+import s from './Counter.module.scss'
+
+const Counter = ({classname, ...rest }) => {
+  return (
+    <div className='CounterWrapper'>
+      <Input type="number" className={s.input} {...rest}/>
+        <div className={s.buttonsWrapper}>
+            <div className={s.button}>+</div>
+            <div className={s.button}>-</div>
+        </div>
+    </div>
+  );
+};
+
+export default Counter;
