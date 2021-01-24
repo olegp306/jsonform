@@ -5,7 +5,7 @@ import s from './Counter.module.scss'
 
 const Counter = ({classname, ...rest }) => {
   return (
-    <div className='CounterWrapper'>
+    <div className={s.counterWrapper}>
       <Input type="number" className={s.input} {...rest}/>
         <div className={s.buttonsWrapper}>
             <div className={s.button}>+</div>
