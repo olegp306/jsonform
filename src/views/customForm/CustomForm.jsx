@@ -5,9 +5,9 @@ import { Field } from "formik";
 import { Formik } from "formik";
 import { formJson } from "./formJson";
 
+
 const renderForm = (json, props) => {
   return json.map(element => {
-    const { component } = element;
     return <InputField {...element} {...props} />;
   });
 };

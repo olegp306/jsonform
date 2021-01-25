@@ -37,11 +37,36 @@ export const formJson = [
     label: "ВУЗ",
     isRequired: true
   },
+  // {
+  //   component: "Input",
+  //   name: "birthPlace",
+  //   label: "Место рождения",
+  //   isRequired: true
+  // },
   {
-    component: "Input",
+    component: "Select",
     name: "birthPlace",
     label: "Место рождения",
-    isRequired: true
+    isRequired: true,
+    options: [
+      {
+        label: "Не важно",
+        value: "nomatters"
+      },
+      {
+        label: "Москва",
+        value: "Moscow"
+      },
+      {
+        label: "Спб",
+        value: "SPB"
+      },
+      ,
+      {
+        label: "Омск",
+        value: "Omsk"
+      }
+    ]
   },
   {
     component: "Checkboxes",
