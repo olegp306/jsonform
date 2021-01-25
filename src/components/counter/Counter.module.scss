@@ -2,10 +2,15 @@
   display: flex;
   justify-items: center;
   align-items: center;
+  width: 270px;
 }
 
 .input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+.inputText {
+  text-align: center;
+  padding-left: 0px;
 }
 
 .buttonsWrapper {
@@ -19,18 +24,28 @@
   justify-content: center;
   align-items: center;
   width: 20px;
-
-  border: #C6C6C6 1px solid;
-  border-radius: 6px;
   height: 20px;
+  margin-left: 3px;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: #fed24a;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: #c39d2f;
+  }
 }
 
-.plusButton{
-   border-bottom-left-radius: 0px;
+.plusButton {
+  border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  border-bottom: #c6c6c6 1px solid;
 }
 
-.minusButton{
+.minusButton {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  border-top: #c6c6c6 1px solid;
 }
