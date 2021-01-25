@@ -1,5 +1,5 @@
-.selectWrapper{
-    display: flex;
+.selectWrapper {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
@@ -7,13 +7,17 @@
 
 .select {
   margin: 10px 0;
-  border: #C6C6C6 1px solid;
+  border: #c6c6c6 1px solid;
   border-radius: 6px;
   height: 40px;
   width: 100%;
+  padding-left: 10px;
+  &:focus {
+    outline: 0px;
+  }
 }
 
 .label {
   width: 170px;
+  flex-shrink: 0;
 }
-
