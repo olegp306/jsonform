@@ -1,25 +1,25 @@
-.counterWrapper{
-    display: flex;
-    justify-items: center;
-    align-items: center;
+.counterWrapper {
+  display: flex;
+  justify-items: center;
+  align-items: center;
 }
 
-.input[type=number]::-webkit-inner-spin-button {
+.input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.buttonsWrapper{
-    display: flex;
-    flex-direction: column;
-    width: 20px;
+.buttonsWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 20px;
 }
 
-.button{
-    display: flex;
-    justify-items: center;
-    align-items: center;
+.button {
+  display: flex;
+  justify-items: center;
+  align-items: center;
 
-      border: gray 1px solid;
-    border-radius: 6px;
-    height: 40px;
+  border: #C6C6C6 1px solid;
+  border-radius: 6px;
+  height: 40px;
 }
