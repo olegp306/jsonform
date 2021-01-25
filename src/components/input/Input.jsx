@@ -2,11 +2,12 @@ import React from "react";
 import s from "./Input.module.scss";
 import cn from "classnames/bind";
 
-const Input = ({ label, className, ...rest }) => {
+const Input = ({ name, label, className, children, ...rest }) => {
   return (
     <div className={s.inputWrapper}>
-      <span className={s.label}>{label}</span>
-      <input className={cn(s.input, className)} {...rest} />
+      {label && <span className={s.label}>{label}</span>}
+      <input name={name} className={cn(s.input, className)} {...rest} />
+      {children}
     </div>
   );
 };

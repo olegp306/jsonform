@@ -2,11 +2,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
 }
 
 .label {
   width: 170px;
+  flex-shrink: 0;
 }
 
 .input {
@@ -15,4 +15,10 @@
   border-radius: 6px;
   height: 40px;
   width: 100%;
+  padding-left: 10px;
+   width: 100%;
+
+  &:focus{
+    outline: 0px;
+  }
 }
