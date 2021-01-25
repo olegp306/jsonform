@@ -8,8 +8,8 @@ const Counter = ({classname, ...rest }) => {
     <div className={s.counterWrapper}>
       <Input type="number" className={s.input} {...rest}/>
         <div className={s.buttonsWrapper}>
-            <div className={s.button}>+</div>
-            <div className={s.button}>-</div>
+            <div className={cn(s.button,s.plusButton)}>+</div>
+            <div className={cn(s.button,s.minusButton)}>-</div>
         </div>
     </div>
   );
