@@ -5,21 +5,35 @@ export const formJson = [
   },
   {
     component: "Input",
-    name: "namename",
+    name: "name",
     label: "Имя",
-    isRequired: true
+    required: true,
+    validationType: "string",
+    validations: [
+      {
+        type: "required",
+        params: ["Имя обязательно для заполения"]
+      }
+    ]
   },
   {
     component: "Counter",
     name: "age",
     label: "Возраст",
-    isRequired: true
+    required: true,
+    validationType: "string",
+    validations: [
+      {
+        type: "required",
+        params: ["Возраст обязательно для заполения"]
+      }
+    ]
   },
   {
     component: "Select",
     name: "maritalStatus",
     label: "Семейное положение",
-    isRequired: true,
+    required: true,
     options: [
       {
         label: "Не женат/не замужем",
@@ -29,25 +43,22 @@ export const formJson = [
         label: "Женат/Замужем",
         value: "married"
       }
-    ]
+    ],
+
   },
   {
     component: "Inputs",
     name: "education",
     label: "ВУЗ",
-    isRequired: true
+    required: true,
+
   },
-  // {
-  //   component: "Input",
-  //   name: "birthPlace",
-  //   label: "Место рождения",
-  //   isRequired: true
-  // },
+
   {
     component: "Select",
     name: "birthPlace",
     label: "Место рождения",
-    isRequired: true,
+    required: true,
     options: [
       {
         label: "Не важно",
@@ -110,12 +121,13 @@ export const formJson = [
       }
     ],
     label: "Навыки",
-    isRequired: true
+    required: true,
+
   },
   {
     component: "Button",
     name: "submitButton",
     label: "Отправить",
-    isRequired: true
+    required: true
   }
 ];
