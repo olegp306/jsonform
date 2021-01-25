@@ -4,8 +4,12 @@ import Input from "../input";
 
 const SmallInput = props => <Input className={s.smallInput} {...props} />;
 
-const Inputs = ({ name, label, className, values = [], ...rest }) => {
-  const [valuesArray, setValuesArray] = useState([values]);
+const Inputs = ({  label, className, value = [''], onChange}) => {
+  const valuesArray=value;
+
+  const onChangeInputs=(valArr)=>{
+      onChange(valArr);
+  }
   return (
     <div className={s.inputsWrapper}>
       <span className={s.label}>{label}</span>
@@ -17,7 +21,7 @@ const Inputs = ({ name, label, className, values = [], ...rest }) => {
                 const newValue = el.target.value;
                 let newArray = [...valuesArray];
                 newArray[index] = newValue;
-                setValuesArray(newArray);
+                onChangeInputs(newArray);
               }}
               value={value}
             >
@@ -27,7 +31,7 @@ const Inputs = ({ name, label, className, values = [], ...rest }) => {
                   onClick={() => {
                     let newArr = [...valuesArray];
                     newArr.splice(index, 1);
-                    setValuesArray([...newArr]);
+                    onChangeInputs([...newArr]);
                   }}
                 >
                   X
@@ -37,14 +41,13 @@ const Inputs = ({ name, label, className, values = [], ...rest }) => {
               {index === valuesArray.length - 1 && (
                 <div className={s.plusWrapper}
                   onClick={() => {
-                    setValuesArray(valuesArray => [...valuesArray, ""]);
+                    onChangeInputs( [...valuesArray, ""]);
                   }}
                 >
                   <span className={s.add}>+</span>
                   <span>Добавить еще</span>
                 </div>
               )}
-              {/*</div>*/}
             </SmallInput>
           ))}
       </div>

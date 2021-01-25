@@ -3,7 +3,7 @@ import Input from '../input';
 import cn from 'classnames/bind';
 import s from './Counter.module.scss'
 
-const Counter = ({classname, ...rest }) => {
+const Counter = ({classname,value, ...rest }) => {
   return (
     <div className={s.counterWrapper}>
       <Input type="number" className={cn(s.input,s.inputText)} {...rest}/>
