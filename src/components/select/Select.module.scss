@@ -1,7 +1,19 @@
-.select
-{
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: center;
+.selectWrapper{
+    display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.select {
+  margin: 10px 0;
+  border: #C6C6C6 1px solid;
+  border-radius: 6px;
+  height: 40px;
+  width: 100%;
+}
+
+.label {
+  width: 170px;
 }
 
