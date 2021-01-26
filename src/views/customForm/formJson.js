@@ -7,7 +7,7 @@ export const formJson = [
     component: "Input",
     name: "name",
     label: "Имя",
-    placeholder:"Введите имя",
+    placeholder: "Введите имя",
     required: true,
     validationType: "string",
     validations: [
@@ -38,21 +38,21 @@ export const formJson = [
     options: [
       {
         label: "Не женат/не замужем",
-        value: "notMarried"
+        value: "notMarried",
+        selected: "selected"
       },
       {
         label: "Женат/Замужем",
         value: "married"
       }
-    ],
-
+    ]
   },
   {
     component: "Inputs",
     name: "education",
     label: "ВУЗ",
-    required: true,
-
+    placeholder: "Введит ВУЗ, например МГУ",
+    required: true
   },
 
   {
@@ -64,7 +64,7 @@ export const formJson = [
       {
         label: "Не важно",
         value: "nomatters",
-        selected="selected",
+        selected: "selected"
       },
       {
         label: "Москва",
@@ -123,8 +123,7 @@ export const formJson = [
       }
     ],
     label: "Навыки",
-    required: true,
-
+    required: true
   },
   {
     component: "Button",

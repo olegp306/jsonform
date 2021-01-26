@@ -4,12 +4,19 @@ import Input from "../input";
 
 const SmallInput = props => <Input className={s.smallInput} {...props} />;
 
-const Inputs = ({  label, className, value = [''], onChange}) => {
-  const valuesArray=value;
+const Inputs = ({
+  label,
+  className,
+  value = [""],
+  onChange,
+  placeholder,
+  ...rest
+}) => {
+  const valuesArray = value;
 
-  const onChangeInputs=(valArr)=>{
-      onChange(valArr);
-  }
+  const onChangeInputs = valArr => {
+    onChange(valArr);
+  };
   return (
     <div className={s.inputsWrapper}>
       <span className={s.label}>{label}</span>
@@ -17,6 +24,7 @@ const Inputs = ({  label, className, value = [''], onChange}) => {
         {valuesArray &&
           valuesArray.map((value, index) => (
             <SmallInput
+              placeholder={placeholder}
               onChange={el => {
                 const newValue = el.target.value;
                 let newArray = [...valuesArray];
@@ -39,9 +47,10 @@ const Inputs = ({  label, className, value = [''], onChange}) => {
               )}
 
               {index === valuesArray.length - 1 && (
-                <div className={s.plusWrapper}
+                <div
+                  className={s.plusWrapper}
                   onClick={() => {
-                    onChangeInputs( [...valuesArray, ""]);
+                    onChangeInputs([...valuesArray, ""]);
                   }}
                 >
                   <span className={s.add}>+</span>
