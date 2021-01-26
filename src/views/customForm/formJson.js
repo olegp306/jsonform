@@ -7,6 +7,7 @@ export const formJson = [
     component: "Input",
     name: "name",
     label: "Имя",
+    placeholder:"Введите имя",
     required: true,
     validationType: "string",
     validations: [
@@ -62,7 +63,8 @@ export const formJson = [
     options: [
       {
         label: "Не важно",
-        value: "nomatters"
+        value: "nomatters",
+        selected="selected",
       },
       {
         label: "Москва",
