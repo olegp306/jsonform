@@ -1,7 +1,5 @@
 import React from "react";
 import "./styles.scss";
-// import Components from "../../components";
-// import { Field } from "formik";
 import { Formik } from "formik";
 import { formJson } from "./formJson";
 import { createYupSchema } from "./components/yupschema";
